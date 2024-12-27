@@ -27,16 +27,6 @@ def collect_files(directory: str) -> Generator[str, None, None]:
        - 파일 크기 검사
        - 시스템/숨김 파일 여부 검사
        - 이전 검사 이력 확인
-    
-    Args:
-        directory: 검사할 디렉토리 경로
-        
-    Yields:
-        str: 검사 대상 파일의 절대 경로
-        
-    Example:
-        for file_path in collect_files("/path/to/directory"):
-            scan_file(file_path)
     """
     try:
         # 디렉토리 경로를 절대 경로로 변환
