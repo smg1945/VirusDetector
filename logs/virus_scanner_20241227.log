@@ -1,0 +1,61 @@
+[2024-12-27 23:47:52] INFO - Starting virus scan in directory: C:\Users\ZAKAR\Downloads\Install
+[2024-12-27 23:48:53] INFO - Starting virus scan in directory: C:\Users\ZAKAR\Downloads\Install
+[2024-12-27 23:48:54] INFO - Found 28 files to scan
+[2024-12-27 23:48:54] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab1.cab
+[2024-12-27 23:49:17] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab1.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:49:17] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab10.cab
+[2024-12-27 23:49:32] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab10.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:49:32] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab2.cab
+[2024-12-27 23:49:55] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab2.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:49:55] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab3.cab
+[2024-12-27 23:50:13] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab3.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:50:13] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab4.cab
+[2024-12-27 23:50:36] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab4.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:50:36] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab5.cab
+[2024-12-27 23:51:01] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab5.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:51:01] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab6.cab
+[2024-12-27 23:51:25] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab6.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:51:25] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab7.cab
+[2024-12-27 23:51:49] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab7.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:51:49] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab8.cab
+[2024-12-27 23:52:07] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab8.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:52:07] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\cab9.cab
+[2024-12-27 23:52:30] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\cab9.cab: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:52:30] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\dotNetFx40_Full_x86_x64.exe
+[2024-12-27 23:52:41] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\dotNetFx40_Full_x86_x64.exe: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:52:41] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\HOffice110.msi
+[2024-12-27 23:52:44] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\HOffice110.msi: 502 Server Error: Bad Gateway for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:52:44] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\InstallerConfig.ini
+[2024-12-27 23:52:44] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\InstallerConfig.ini: 404 Client Error: Not Found for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:52:44] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\NDP461-KB3102436-x86-x64-AllOS-ENU.exe
+[2024-12-27 23:52:59] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\NDP461-KB3102436-x86-x64-AllOS-ENU.exe: 413 Client Error: Request Entity Too Large for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:52:59] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Setup.exe
+[2024-12-27 23:53:00] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Setup.exe: 502 Server Error: Bad Gateway for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:00] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\vcredist_x86.exe
+[2024-12-27 23:53:02] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\vcredist_x86.exe: 502 Server Error: Bad Gateway for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:02] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\vc_redist.x86.exe
+[2024-12-27 23:53:07] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\vc_redist.x86.exe: 502 Server Error: Bad Gateway for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:07] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\WindowsInstaller-KB884016-v2-x86.exe
+[2024-12-27 23:53:08] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\WindowsInstaller-KB884016-v2-x86.exe: 502 Server Error: Bad Gateway for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:08] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\BootstrapperCore.xml
+[2024-12-27 23:53:10] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\BootstrapperCore.xml: 404 Client Error: Not Found for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:10] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\FeatureSize.exe
+[2024-12-27 23:53:10] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\FeatureSize.exe: 404 Client Error: Not Found for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:10] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\INIFileParser.xml
+[2024-12-27 23:53:12] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\INIFileParser.xml: 502 Server Error: Bad Gateway for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:12] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\Install_UI.exe
+[2024-12-27 23:53:14] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\Install_UI.exe: 502 Server Error: Bad Gateway for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:14] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\Install_UI.exe.config
+[2024-12-27 23:53:14] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\Install_UI.exe.config: 404 Client Error: Not Found for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:14] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\license.txt
+[2024-12-27 23:53:14] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\license.txt: 404 Client Error: Not Found for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:14] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\Microsoft.Deployment.WindowsInstaller.xml
+[2024-12-27 23:53:15] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\Microsoft.Deployment.WindowsInstaller.xml: 404 Client Error: Not Found for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:15] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\WixSharp.Lab.xml
+[2024-12-27 23:53:15] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\WixSharp.Lab.xml: 404 Client Error: Not Found for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:15] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\WixSharp.UI.xml
+[2024-12-27 23:53:16] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\WixSharp.UI.xml: 404 Client Error: Not Found for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:16] DEBUG - Scanning file: C:\Users\ZAKAR\Downloads\Install\Install_UI\WixSharp.xml
+[2024-12-27 23:53:18] ERROR - Error scanning C:\Users\ZAKAR\Downloads\Install\Install_UI\WixSharp.xml: 502 Server Error: Bad Gateway for url: https://www.virustotal.com/api/v3/files/files
+[2024-12-27 23:53:18] INFO - Scan completed successfully
+[2024-12-27 23:53:18] INFO - Scan process finished

@@ -4,13 +4,13 @@ import time
 from tqdm import tqdm
 from typing import List, Dict
 
+from config.config import API_KEY
 from src.file_handler import collect_files, update_scan_history
 from src.logger import logger
 
 
-API_KEY = os.getenv("API_KEY")
-
 URL = "https://www.virustotal.com/api/v3/files"
+LARGE_URL = "https://www.virustotal.com/api/v3/files/upload_url"
 
 headers = {
     "accept": "application/json",
@@ -19,6 +19,78 @@ headers = {
 
 RATE_LIMIT_PER_MINUTE = 4
 WAIT_TIME = 60 / RATE_LIMIT_PER_MINUTE
+LARGE_FILE_SIZE = 32 * 1024 * 1024
+
+
+
+def submit_file_for_scan(file_path: str) -> Dict:
+    # 파일을 API에 제출하여 스캔을 요청
+    file_obj = None
+    try:
+        if os.path.getsize(file_path) >= LARGE_FILE_SIZE:
+            response = requests.get(
+                LARGE_URL,
+                headers=headers,
+            )
+            get_url = response.values()
+            file_obj = open(file_path, "rb")
+            files = {"file": (file_path, file_obj, "application/octet-stream")}
+            response = requests.post(
+                get_url,
+                files=files,
+                headers=headers,
+            )
+        else:
+            file_obj = open(file_path, "rb")
+            files = {"file": (file_path, file_obj, "application/octet-stream")}
+            response = requests.post(
+                URL,
+                files=files,
+                headers=headers,
+            )
+        response.raise_for_status()
+        return response.json()
+    finally:
+        if file_obj:
+            file_obj.close()
+
+
+def get_scan_results(analysis_id: str) -> Dict:
+    # 분석 ID로 스캔 결과를 조회
+    response = requests.get(
+        f"{URL}/analyses/{analysis_id}",
+        headers=headers
+    )
+    response.raise_for_status()
+    return response.json()
+
+
+class ScanManager:
+    
+    def __init__(self):
+        self.results: Dict[str, Dict] = {}
+        self.suspicious_files: List[str] = []
+    
+    def process_scan_result(self, file_path: str, result: Dict) -> None:
+        # 스캔 결과 처리 후 의심스러운 파일 기록
+        stats = result.get("data", {}).get("attributes", {}).get("stats", {})
+        if stats.get("malicious", 0) > 0 or stats.get("suspicious", 0) > 0:
+            self.suspicious_files.append(
+                f"{file_path}: {stats.get("malicious", 0)} malicious, "
+                f"{stats.get("suspicious", 0)} suspicious detections"
+            )
+        self.results[file_path] = result
+    
+    def print_summary(self) -> None:
+        # 스캔 결과 요약 출력
+        print("\n=== Scan Summary ===")
+        print(f"Total files scanned: {len(self.results)}")
+        print(f"Suspicious files found: {len(self.suspicious_files)}")
+        if self.suspicious_files:
+            print("\nSuspicious Files:")
+            for file in self.suspicious_files:
+                print(file)
+
 
 
 def main():
@@ -73,55 +145,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-def submit_file_for_scan(file_path: str) -> Dict:
-    # 파일을 API에 제출하여 스캔을 요청
-    try:
-        files = {"file": open(file_path, "rb")}
-        response = requests.post(
-            f"{URL}/files",
-            headers=headers,
-            files=files
-        )
-        response.raise_for_status()
-        return response.json()
-    finally:
-        files["file"].close()
-
-
-def get_scan_results(analysis_id: str) -> Dict:
-    # 분석 ID로 스캔 결과를 조회
-    response = requests.get(
-        f"{URL}/analyses/{analysis_id}",
-        headers=headers
-    )
-    response.raise_for_status()
-    return response.json()
-
-
-class ScanManager:
-    
-    def __init__(self):
-        self.results: Dict[str, Dict] = {}
-        self.suspicious_files: List[str] = []
-    
-    def process_scan_result(self, file_path: str, result: Dict) -> None:
-        # 스캔 결과 처리 후 의심스러운 파일 기록
-        stats = result.get("data", {}).get("attributes", {}).get("stats", {})
-        if stats.get("malicious", 0) > 0 or stats.get("suspicious", 0) > 0:
-            self.suspicious_files.append(
-                f"{file_path}: {stats.get("malicious", 0)} malicious, "
-                f"{stats.get("suspicious", 0)} suspicious detections"
-            )
-        self.results[file_path] = result
-    
-    def print_summary(self) -> None:
-        # 스캔 결과 요약 출력
-        print("\n=== Scan Summary ===")
-        print(f"Total files scanned: {len(self.results)}")
-        print(f"Suspicious files found: {len(self.suspicious_files)}")
-        if self.suspicious_files:
-            print("\nSuspicious Files:")
-            for file in self.suspicious_files:
-                print(file)
